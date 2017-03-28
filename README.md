@@ -31,7 +31,7 @@ Sentry.run do
 end
 ```
 
-You can use `Sentry.run` for recompile and reload your code without external `sentry.cr`.
+You can use `Sentry.run` for recompile and reload a block without external `sentry.cr`.
 
 Also you can use `Sentry.config`:
 
