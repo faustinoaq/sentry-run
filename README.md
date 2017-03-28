@@ -50,9 +50,9 @@ Sentry.config(files: ["src/app.cr"])
 
 ## How does it work?
 
-Basically this shards check a `sentry.lock` file.
+Basically this shard checks a `sentry.lock` file.
 
-When you run your code `Sentry.run` create a `sentry.lock` and then yield a block. After a code change Sentry recompile your file and rerun a new app instance with `run_command` in `Sentry.config`.
+When you run your code `Sentry.run` create a `sentry.lock` and then yield a block. After a code change Sentry recompiles your file and rerun a new app instance with `run_command` in `Sentry.config`.
 
 ## Contributing
 
