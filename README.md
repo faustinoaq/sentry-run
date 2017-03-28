@@ -31,7 +31,7 @@ Sentry.run do
 end
 ```
 
-You can use `Sentry.run` for recompile and reload a block without external `sentry.cr`.
+You can use `Sentry.run` for recompile and reload your code without external `sentry.cr`.
 
 Also you can use `Sentry.config`:
 
@@ -52,7 +52,7 @@ Sentry.config(files: ["src/app.cr"])
 
 Basically this shards check a `sentry.lock` file.
 
-When you run your code `Sentry.run` create a `sentry.lock` and then yield your code. After a code change Sentry recompile your file and rerun a new app instance with `run_command` in `Sentry.config`.
+When you run your code `Sentry.run` create a `sentry.lock` and then yield a block. After a code change Sentry recompile your file and rerun a new app instance with `run_command` in `Sentry.config`.
 
 ## Contributing
 
