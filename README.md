@@ -24,7 +24,7 @@ get "/" do
   "Hello world"
 end
 
-# Sentry.config(files: ["src/app.cr"])
+Sentry.config(files: ["src/app.cr"]) # => optional
 
 Sentry.run do
   Kemal.run
