@@ -24,6 +24,8 @@ get "/" do
   "Hello world"
 end
 
+# Sentry.config(files: ["src/app.cr"])
+
 Sentry.run do
   Kemal.run
 end
@@ -34,10 +36,10 @@ You can use `Sentry.run` for recompile and reload your code without external `se
 Also you can use `Sentry.config`:
 
 ```crystal
-Sentry.config(files: ["foo.cr"])
+Sentry.config(files: ["src/app.cr"])
 
 # Default values
-# process_name = "Kemal"
+# process_name = "App"
 # build_command = "crystal build #{__FILE__}"
 # run_command = "./#{File.basename(__FILE__, ".cr")}"
 # build_args = [] of String
