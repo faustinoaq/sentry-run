@@ -1,6 +1,6 @@
 # sentry-run
 
-A shards using Sentry for reload code changes with `Sentry.run`.
+A shards using [Sentry](https://github.com/samueleaton/sentry) for reload code changes with `Sentry.run`.
 
 ## Installation
 
