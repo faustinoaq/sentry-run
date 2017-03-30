@@ -1,5 +1,6 @@
 require "sentry"
 
+# Default Sentry config that allow recompile and rerun app __FILE__.
 module Sentry
   PROCESS_NAME  = "App"
   BUILD_COMMAND = "crystal build #{__FILE__}"
