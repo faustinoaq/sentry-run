@@ -18,6 +18,9 @@ Then run `shards update`.
 
 ## Usage
 
+1. Create a new process with `process = Sentry.config(...)`
+2. Execute `Sentry.run(process) do ... end`
+
 ```crystal
 require "kemal"
 require "sentry-run"
@@ -26,24 +29,24 @@ get "/" do
   "Hello world"
 end
 
-Sentry.config(files: ["src/app.cr"]) # => optional
+process = Sentry.config(
+  "App",
+  "crystal build " + __FILE__,
+  "./" + File.basename(__FILE__, ".cr")
+)
 
-Sentry.run do
+Sentry.run process do
   Kemal.run
 end
 ```
 
 You can use `Sentry.run` for recompile and reload your code without external `sentry.cr`.
 
-Also you can use `Sentry.config`:
-
 ```crystal
-Sentry.config(files: ["src/app.cr"])
-
 # Default values
-# process_name = "App"
-# build_command = "crystal build #{__FILE__}"
-# run_command = "./#{File.basename(__FILE__, ".cr")}"
+# process_name : String
+# build_command : String
+# run_command : String
 # build_args = [] of String
 # run_args = [] of String
 # files = ["src/**/*.cr", "src/**/*.ecr"]
