@@ -1,5 +1,7 @@
 # sentry-run
 
+[![Build Status](https://travis-ci.org/faustinoaq/sentry-run.svg?branch=master)](https://travis-ci.org/faustinoaq/sentry-run)
+
 A shard using [Sentry](https://github.com/samueleaton/sentry) for reload code changes with `Sentry.run`.
 
 ## Installation
