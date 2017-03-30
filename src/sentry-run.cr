@@ -17,12 +17,7 @@ module Sentry
       at_exit do
         File.delete(Config::INSTANCE.lock)
       end
-      spawn do
-        Config::INSTANCE.process.run
-      end
-      loop do
-        sleep 1
-      end
+      Config::INSTANCE.process.run
     end
   end
 end
