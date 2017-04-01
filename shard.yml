@@ -7,6 +7,5 @@ authors:
 dependencies:
   sentry:
     github: samueleaton/sentry
-    commit: 9f14238a5acc2582c0c48958199dc49e00b651b3
 
 license: MIT
