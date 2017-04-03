@@ -38,15 +38,16 @@ end
 
 You can use `Sentry.run` for recompile and reload your code without external `sentry.cr`.
 
-```crystal
-# Default values
-# process_name : String
-# build_command : String
-# run_command : String
-# build_args = [] of String
-# run_args = [] of String
-# files = ["src/**/*.cr", "src/**/*.ecr"]
-# should_build = true
+Default values:
+
+```
+process_name : String
+build_command : String
+run_command : String
+build_args = [] of String
+run_args = [] of String
+files = ["src/**/*.cr", "src/**/*.ecr"]
+should_build = true
 ```
 
 ## How does it work?
