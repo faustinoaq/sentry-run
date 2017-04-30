@@ -31,7 +31,7 @@ end
 
 process = Sentry.config(
   process_name: "App",
-  build_command: build,
+  build_command: "crystal",
   run_command: "./bin/app",
   build_args: ["build", "src/app.cr", "-o", "bin/app"],
   run_args: ["-p", "9000"])
