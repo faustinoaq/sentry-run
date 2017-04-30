@@ -29,7 +29,10 @@ get "/" do
   "Hello world"
 end
 
-process = Sentry.config("App", "crystal build src/app.cr", "./app")
+process = Sentry.config(
+  process_name: "App",
+  build_command: "crystal build src/app.cr",
+  run_command: "./app")
 
 Sentry.run(process) do
   Kemal.run
