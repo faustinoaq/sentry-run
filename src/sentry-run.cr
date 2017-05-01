@@ -9,16 +9,12 @@ module Sentry
   # When a Sentry process is finished the `sentry.lock` file is deleted
   # because Signal::INT has a trap for Ctrl+C and `at_exit` is executed.
   def self.run(process : Sentry::ProcessRunner)
-    Signal::INT.trap do
-      exit
-    end
+    Signal::INT.trap { exit }
     if File.exists?(LOCK)
       yield
     else
       File.write(LOCK, "")
-      at_exit do
-        File.delete(LOCK)
-      end
+      at_exit { File.delete(LOCK) }
       process.run
     end
   end
