@@ -7,6 +7,6 @@ authors:
 dependencies:
   sentry:
     github: samueleaton/sentry
-    branch: master
+    vercion: ~> 0.1.1
 
 license: MIT
