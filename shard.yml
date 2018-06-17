@@ -6,7 +6,8 @@ authors:
 
 dependencies:
   sentry:
-    github: samueleaton/sentry
-    vercion: ~> 0.1.1
+    github: mamantoha/sentry
+    branch: crystal_0.25
+    # vercion: ~> 0.1.1
 
 license: MIT
