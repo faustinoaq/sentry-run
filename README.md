@@ -1,4 +1,4 @@
-# sentry-run
+<p align="left"><img src="logo/logotype_horizontal.png" alt="sentry-run" height="120px"></p>
 
 [![Build Status](https://travis-ci.org/faustinoaq/sentry-run.svg?branch=master)](https://travis-ci.org/faustinoaq/sentry-run)
 
